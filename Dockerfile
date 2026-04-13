@@ -10,4 +10,5 @@ COPY reference-components/ /reference-components/
 RUN npm run build
 FROM caddy:alpine
 COPY --from=0 /app/dist /srv
-EXPOSE 80
+RUN printf ':8080 {\n\troot * /srv\n\tfile_server\n\ttry_files {path} /index.html\n}\n' > /etc/caddy/Caddyfile
+EXPOSE 8080
