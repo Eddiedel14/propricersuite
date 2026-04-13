@@ -1,4 +1,5 @@
 FROM node:22-alpine
+ARG CACHE_BUST=2
 WORKDIR /app
 COPY app/package*.json ./
 RUN npm install
