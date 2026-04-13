@@ -1,0 +1,70 @@
+/* Rates / Tables hub — layout and selection chrome (Harmony tokens only) */
+
+.rates-tables-page__hero-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: calc(var(--space-8) + var(--space-4));
+  height: calc(var(--space-8) + var(--space-4));
+  border-radius: var(--radius-md);
+  background-color: var(--color-success-light);
+  color: var(--theme-primary);
+}
+
+.rates-tables-page__grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+@media (max-width: 1279px) {
+  .rates-tables-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .rates-tables-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .rates-tables-page__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.rates-tables-card {
+  cursor: pointer;
+  text-align: center;
+  height: 100%;
+  transition: box-shadow var(--transition-fast);
+}
+
+.rates-tables-card:focus-visible {
+  outline: var(--border-width-standard) solid var(--theme-primary);
+  outline-offset: var(--space-1);
+}
+
+.rates-tables-card--selected {
+  box-shadow: 0 0 0 var(--border-width-thick) var(--theme-primary);
+}
+
+.rates-tables-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+  color: var(--theme-primary);
+}
+
+.rates-tables-card__icon svg {
+  font-size: calc(var(--space-6) + var(--space-2));
+}
+
+.rates-tables-card__count {
+  display: inline-block;
+  margin-top: var(--space-2);
+}

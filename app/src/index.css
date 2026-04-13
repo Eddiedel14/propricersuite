@@ -1,0 +1,22 @@
+/* App-level layout only — Harmony tokens and Figtree/Lexend/JetBrains Mono load via harmony-styles/reset.css */
+/* Pass 1: only neutral #root resets — no width/max-width/min-height (theme-verifier item 14). */
+#root {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+code {
+  font-family: var(--font-mono);
+}

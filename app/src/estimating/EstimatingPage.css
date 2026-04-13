@@ -1,0 +1,42 @@
+/* Estimating module — token-only highlights */
+
+.estimating-page__tab-bar {
+  background-color: var(--elevated-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.estimating-page__table-toolbar {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-light);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.estimating-table__cell--description {
+  background-color: var(--color-warning-light);
+}
+
+.estimating-table__footer-cost {
+  font-weight: var(--font-semibold);
+  color: var(--theme-primary);
+}
+
+/* Travel tab — editable / input band (trip purpose → airfare) */
+.estimating-table__cell--travel-input {
+  background-color: var(--color-warning-light);
+}
+
+/* Empty-state tabs — clipboard-style block below toolbar */
+.estimating-page__empty-wrap {
+  min-height: calc(var(--space-24) * 5);
+}
+
+.estimating-page__empty-shell {
+  min-height: inherit;
+}
+
+.estimating-page__empty-icon {
+  color: var(--text-secondary);
+  opacity: 0.85;
+}

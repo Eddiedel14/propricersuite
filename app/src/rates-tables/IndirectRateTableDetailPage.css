@@ -1,0 +1,52 @@
+/* Indirect rate table detail — layout + input column highlight (tokens) */
+
+.indirect-rate-detail__crumb-link {
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.indirect-rate-detail__crumb-link:hover {
+  text-decoration: underline;
+}
+
+.indirect-rate-detail__hero-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: calc(var(--space-10) + var(--space-2));
+  height: calc(var(--space-10) + var(--space-2));
+  border-radius: var(--radius-md);
+  background-color: var(--color-warning-light);
+  color: var(--theme-primary);
+}
+
+.indirect-rate-detail__hero-icon svg {
+  font-size: calc(var(--space-6) + var(--space-1));
+}
+
+.indirect-rate-detail__header-shell .card__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.indirect-rate-detail__fy-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.indirect-rate-detail__cell--base-salary {
+  background-color: var(--color-warning-light);
+}
+
+.indirect-rate-detail__table-toolbar {
+  border: 1px solid var(--border-light);
+  border-bottom: none;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background-color: var(--surface-bg);
+}

@@ -1,0 +1,43 @@
+/* Layout only — typography and interactive states from Harmony utilities / btn */
+
+.app-modules-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-4);
+}
+
+.app-modules-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.app-modules-panel__section-title {
+  margin: 0;
+}
+
+.app-modules-panel__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.app-modules-panel__option {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.app-modules-panel__option-link {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  min-height: calc(var(--space-2) * 2 + var(--icon-md, 20px));
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}

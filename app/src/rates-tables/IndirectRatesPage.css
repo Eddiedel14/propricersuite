@@ -1,0 +1,54 @@
+/* Indirect Rates list — layout tokens only */
+
+.indirect-rates-page__title-link {
+  text-decoration: none;
+}
+
+.indirect-rates-page__title-link:hover {
+  text-decoration: underline;
+}
+
+/* Indirect Rates detail — layout tokens only */
+
+.indirect-rates-page__header-shell .card__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.indirect-rates-page__header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: calc(var(--space-10) + var(--space-2));
+  height: calc(var(--space-10) + var(--space-2));
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background-color: var(--surface-bg);
+  color: var(--theme-primary);
+}
+
+.indirect-rates-page__header-icon svg {
+  font-size: calc(var(--space-6) + var(--space-1));
+}
+
+.indirect-rates-page__table-name-btn {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  min-height: 0;
+  text-transform: none;
+  justify-content: flex-start;
+}
+
+.indirect-rates-page__table-name-btn:focus-visible {
+  outline: var(--border-width-standard) solid var(--theme-primary);
+  outline-offset: var(--space-1);
+  border-radius: var(--radius-sm);
+}

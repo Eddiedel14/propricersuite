@@ -1,0 +1,58 @@
+/* Proposal list — row hover module chips (tokens only) */
+
+.proposal-list__estimating-link {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-md);
+}
+
+.proposal-list__estimating-link:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.proposal-list__open-cell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.proposal-list__module-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.proposal-list__row:hover .proposal-list__module-chips {
+  opacity: 1;
+}
+
+.chip.proposal-list__chip--submitted {
+  background-color: var(--alert-chip-pink-bg);
+  color: var(--alert-chip-pink-fg);
+  border-color: var(--alert-chip-pink-fg);
+}
+
+/* Add-on module chips — violet (matches dashboard add-on accent) */
+.chip.proposal-list__chip--addon {
+  color: var(--company-picker-indicator-violet);
+  border-color: var(--company-picker-indicator-violet);
+  background-color: color-mix(
+    in srgb,
+    var(--company-picker-indicator-violet) 12%,
+    var(--card-bg)
+  );
+}
+
+.proposal-list__legend-core {
+  color: var(--theme-primary);
+}
+
+.proposal-list__legend-addon {
+  color: var(--company-picker-indicator-violet);
+}

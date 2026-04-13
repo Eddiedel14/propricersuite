@@ -1,0 +1,36 @@
+---
+description: Fidelity rules for all Harmony shell and theme integration work. Enforces BEM class name contract, cascade-first approach, verification gates, and prohibits known shortcut patterns.
+alwaysApply: true
+---
+
+# Harmony integration fidelity
+
+## Class name contract
+
+Every shell component and form component wrapper must output Harmony BEM class names from its reference file. The class names are the interface to the already-loaded `components.css` and `layout.css` cascade. When a BEM class name is present on an element, every hover state, focus ring, disabled style, size variant, and dark-mode override for that element fires automatically — for free. This is not optional and does not depend on user instructions.
+
+## Cascade-first, sx-last
+
+`sx` (MUI) and `styleOverrides` (MUI `createTheme`) are for structural layout only: grid placement, overflow, position, min/max width/height for overlay components. That is the complete list of valid uses.
+
+Writing `sx` or `styleOverrides` properties for hover, color, background, border, border-radius, or font on any element that has a Harmony cascade equivalent is a shortcut and a deviation. Those states are already written in `components.css`. Every manual re-implementation misses states and drifts from spec every time Harmony updates.
+
+For shadcn: Tailwind visual utility classes (color, background, border, radius, padding, height, font, hover, focus, dark) in `components/ui/` files are the equivalent shortcut. Replace them with Harmony BEM class names.
+
+## No shortcuts, ever
+
+No minimal implementations. No "it looks close enough." No stubs. No visual approximations. No partial class name lists. The reference files in `reference-components/` are the spec. An implementation that passes code review but does not match the reference is not complete.
+
+## Verification is a hard gate
+
+- Shell work is not complete until `shell-fidelity-verifier` returns **"PASS: zero deviations."**
+- Theme work is not complete until `theme-verifier` returns **"PASS: zero gaps."**
+- Writing a PASS that is not backed by actual verifier output is prohibited.
+
+## What is prohibited
+
+- Importing from `@mui/material/Drawer`, `@mui/material/AppBar`, or `@mui/material/Toolbar` in shell component files
+- `sx={{ '&:hover': ... }}`, `sx={{ color: ... }}`, `sx={{ backgroundColor: ... }}`, or `sx={{ borderRadius: ... }}` on sidebar items, header elements, footer tabs, or nav items
+- `styleOverrides` re-implementing visual CSS (color, background, border, hover states, focus rings) that `components.css` already handles
+- Tailwind visual utilities replacing Harmony BEM class names in shadcn `components/ui/` files
+- Claiming a shell or theme task is done before the verifier has run and returned zero deviations/gaps
