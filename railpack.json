@@ -1,8 +1,10 @@
 {
-  "install": {
-    "cmds": ["npm ci --include=dev"]
-  },
-  "build": {
-    "cmds": ["npm run build"]
+  "steps": {
+    "install": {
+      "cmds": ["cd app && npm install"]
+    },
+    "build": {
+      "cmds": ["cd app && npm run build"]
+    }
   }
 }
