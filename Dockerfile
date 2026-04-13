@@ -6,6 +6,7 @@ RUN npm install
 COPY app/ ./
 COPY harmony-data/ /harmony-data/
 COPY harmony-styles/ /harmony-styles/
+COPY reference-components/ /reference-components/
 RUN npm run build
 FROM caddy:alpine
 COPY --from=0 /app/dist /srv
