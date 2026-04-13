@@ -2,7 +2,7 @@ FROM node:22-alpine
 ARG CACHE_BUST=2
 WORKDIR /app
 COPY app/package*.json ./
-RUN npm install
+RUN npm install --include=dev
 COPY app/ ./
 COPY harmony-data/ /harmony-data/
 COPY harmony-styles/ /harmony-styles/
