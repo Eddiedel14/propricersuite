@@ -1,7 +1,10 @@
 {
-    "$schema": "https://railway.com/railway.schema.json",
-    "build": {
-      "installCommand": "npm install",
-      "buildCommand": "npm run build"
-    }
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "installCommand": "npm ci --include=dev",
+    "buildCommand": "npm run build"
+  },
+  "deploy": {
+    "staticDir": "app/dist"
   }
+}
