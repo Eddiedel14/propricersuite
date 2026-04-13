@@ -1,0 +1,9 @@
+cat > railway.json << 'EOF'
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "installCommand": "npm install",
+    "buildCommand": "npm run build"
+  }
+}
+EOF
