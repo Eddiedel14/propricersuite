@@ -2,9 +2,9 @@
   "name": "harmony-integration-kit",
   "private": true,
   "scripts": {
-    "dev": "npm run dev --prefix app",
-    "build": "npm run build --prefix app",
-    "preview": "npm run preview --prefix app",
-    "postinstall": "cd app && npm install"
-  }
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "lint": "eslint .",
+  "preview": "vite preview"
+}
 }
